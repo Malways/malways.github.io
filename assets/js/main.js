@@ -260,42 +260,6 @@
   }
 
   /* ====================================================== */
-  /* Count-up stats                                         */
-  /* ====================================================== */
-  const counters = $$("[data-count]");
-
-  if (counters.length) {
-    const run = (el) => {
-      const target = parseFloat(el.dataset.count);
-      if (Number.isNaN(target)) return;
-      if (reduced) { el.textContent = String(target); return; }
-
-      const started = performance.now();
-      const duration = 1200;
-      const step = (now) => {
-        const t2 = Math.min(1, (now - started) / duration);
-        const eased = 1 - Math.pow(1 - t2, 3);
-        el.textContent = String(Math.round(target * eased));
-        if (t2 < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    };
-
-    if ("IntersectionObserver" in window) {
-      const co = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          run(entry.target);
-          co.unobserve(entry.target);
-        });
-      }, { threshold: 0.4 });
-      counters.forEach((el) => co.observe(el));
-    } else {
-      counters.forEach(run);
-    }
-  }
-
-  /* ====================================================== */
   /* Filter chips (/claude work log)                        */
   /* ====================================================== */
   const chips = $$("[data-filter]");

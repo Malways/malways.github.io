@@ -551,23 +551,6 @@ ul, ol { list-style: none; padding: 0; }
 }
 .panel pre b { color: var(--fg); font-weight: 500; }
 
-/* Stat counters */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--gap);
-}
-.stats div { border-top: 1px solid var(--line); padding-top: 1rem; }
-.stats dt { font-size: var(--step--1); color: var(--fg-dim); text-transform: uppercase; letter-spacing: .12em; }
-.stats dd {
-  margin: .3rem 0 0;
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  line-height: 1;
-  letter-spacing: -.045em;
-  font-variant-numeric: tabular-nums;
-}
-.stats dd small { font-size: .42em; letter-spacing: -.01em; color: var(--fg-muted); margin-left: .15em; }
-
 /* =========================================================
    Reveal animations
    ========================================================= */
