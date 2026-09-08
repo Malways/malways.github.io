@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720" role="img" aria-label="Abstract project artwork 6">
+  <defs>
+    <radialGradient id="g6a" cx="34%" cy="30%" r="78%">
+      <stop offset="0%" stop-color="#e4e4e7" stop-opacity=".95"/>
+      <stop offset="45%" stop-color="#3f3f46" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g6b" gradientTransform="rotate(300)">
+      <stop offset="0%" stop-color="#e4e4e7" stop-opacity=".85"/>
+      <stop offset="60%" stop-color="#3f3f46" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="b6" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <filter id="n6">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="600" height="720" fill="#080808"/>
+  <g filter="url(#b6)">
+    <circle cx="230" cy="250" r="220" fill="url(#g6a)"/>
+    <path d="M-40 620C120 520 220 470 330 360S520 130 640 60v700H-40z" fill="url(#g6b)"/>
+    <ellipse cx="430" cy="560" rx="200" ry="150" fill="#3f3f46" opacity=".55"/>
+  </g>
+  <g opacity=".5">
+    <path d="M60 700C170 560 240 470 340 380s180-190 240-300" stroke="#e4e4e7" stroke-width="1.5" fill="none" opacity=".7"/>
+    <path d="M20 660C150 540 230 450 330 340s170-210 230-320" stroke="#ffffff" stroke-width="1" fill="none" opacity=".25"/>
+  </g>
+  <rect width="600" height="720" filter="url(#n6)" opacity=".2" style="mix-blend-mode:overlay"/>
+</svg>

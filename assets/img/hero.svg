@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="Abstract eclipse artwork">
+  <defs>
+    <linearGradient id="sphere" x1=".18" y1=".08" x2=".82" y2=".95">
+      <stop offset="0%"   stop-color="#fdfdfd"/>
+      <stop offset="24%"  stop-color="#dcdcdc"/>
+      <stop offset="50%"  stop-color="#8e8e8e"/>
+      <stop offset="76%"  stop-color="#3a3a3a"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#0d0d0d" stop-opacity=".55"/>
+      <stop offset="45%"  stop-color="#0d0d0d" stop-opacity=".12"/>
+      <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#0d0d0d" stop-opacity=".16"/>
+      <stop offset="60%"  stop-color="#0d0d0d" stop-opacity=".05"/>
+      <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0d0d0d" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur60" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <filter id="blur10" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <clipPath id="clipSphere">
+      <circle cx="400" cy="392" r="252"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="800" fill="#f2f1ef"/>
+
+  <!-- ambient shadow -->
+  <circle cx="418" cy="416" r="330" fill="url(#shadow)" filter="url(#blur60)"/>
+
+  <!-- horizon lines -->
+  <g stroke="#0d0d0d" stroke-width="1" opacity=".1">
+    <line x1="0" y1="230" x2="800" y2="230"/>
+    <line x1="0" y1="392" x2="800" y2="392"/>
+    <line x1="0" y1="554" x2="800" y2="554"/>
+  </g>
+
+  <!-- main body -->
+  <circle cx="400" cy="392" r="252" fill="url(#sphere)"/>
+
+  <!-- inner banding, clipped to the body -->
+  <g clip-path="url(#clipSphere)" opacity=".5">
+    <ellipse cx="330" cy="300" rx="210" ry="120" fill="#ffffff" opacity=".28" filter="url(#blur10)"/>
+    <path d="M148 480c120 60 300 66 460-6 60-28 110-70 140-118v396H148z"
+          fill="#050505" opacity=".4" filter="url(#blur10)"/>
+    <path d="M120 392h560" stroke="#ffffff" stroke-width="1.5" opacity=".2"/>
+  </g>
+
+  <!-- rim -->
+  <circle cx="400" cy="392" r="252" fill="none" stroke="url(#rim)" stroke-width="2.5"/>
+
+  <!-- crossing shard -->
+  <path d="M96 700 L470 96 L516 128 L142 732 Z" fill="url(#shard)" opacity=".2"/>
+
+  <!-- small satellite -->
+  <circle cx="628" cy="196" r="26" fill="#141414" opacity=".9"/>
+  <circle cx="628" cy="196" r="52" fill="none" stroke="#0d0d0d" stroke-width="1" opacity=".3"/>
+
+  <rect width="800" height="800" filter="url(#grain)" opacity=".1" style="mix-blend-mode:multiply"/>
+</svg>

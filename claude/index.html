@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Working with Claude — malways</title>
+<meta name="description" content="Claude와 함께 진행한 작업 기록. 무엇을 요청했고, 어떻게 만들었고, 무엇이 남았는지 정리합니다.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://malways.github.io/claude/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Working with Claude — malways">
+<meta property="og:description" content="Claude와 함께 진행한 작업 기록.">
+<meta property="og:url" content="https://malways.github.io/claude/">
+<meta property="og:image" content="https://malways.github.io/assets/img/mark.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/img/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-ko="본문으로 건너뛰기" data-en="Skip to content">Skip to content</a>
+
+<!-- Scroll progress -->
+<div class="progress" aria-hidden="true"></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="../" data-ko-aria="malways 홈" data-en-aria="malways home" aria-label="malways home">
+      <span class="logo__word">Malways</span>
+    </a>
+
+    <div class="header__end">
+      <nav class="nav" data-ko-aria="주요 메뉴" data-en-aria="Main menu" aria-label="Main menu">
+        <a href="../#about" data-ko="소개" data-en="About">About</a>
+        <a href="./" aria-current="page">Claude</a>
+      </nav>
+
+      <div class="lang" role="group" aria-label="Language / 언어">
+        <button class="lang__btn" type="button" data-lang="ko" aria-pressed="false">KO</button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button class="lang__btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+      </div>
+
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu"
+              data-ko-aria="메뉴" data-en-aria="Menu" aria-label="Menu">
+        <span class="burger__text">Menu</span>
+        <span class="burger__lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Fullscreen menu (mobile) -->
+<div class="menu" id="menu" aria-hidden="true">
+  <nav data-ko-aria="모바일 메뉴" data-en-aria="Mobile menu" aria-label="Mobile menu">
+    <ul>
+      <li><a href="../#about" data-ko="소개" data-en="About">About</a></li>
+      <li><a href="./">Claude</a></li>
+    </ul>
+  </nav>
+  <div class="menu__foot">
+    <span data-ko="서울, 대한민국" data-en="Seoul, KR">Seoul, KR</span>
+  </div>
+</div>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ================= Page hero ================= -->
+  <section class="page-hero wrap">
+    <a class="back-link" href="../">
+      <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+        <path d="M13 5H1m0 0 4-4M1 5l4 4" stroke="currentColor" stroke-width="1.3"/>
+      </svg>
+      <span data-ko="포트폴리오로 돌아가기" data-en="Back to portfolio">Back to portfolio</span>
+    </a>
+
+    <h1 class="page-hero__title" data-split
+        data-ko="Claude와 함께 만든 것들, 그리고 그 과정의 {기록}."
+        data-en="Things built with Claude, and the {record} of how.">
+      Things built with Claude, and the {record} of how.
+    </h1>
+
+    <p class="page-hero__lede" data-hero-reveal data-reveal
+       data-ko="무엇을 요청했고, 어떤 방식으로 나눠 진행했고, 결과적으로 무엇이 남았는지를 한 곳에 모아둡니다. 프롬프트와 결과물을 함께 기록하는 것이 목적입니다."
+       data-en="What I asked for, how the work was broken down, and what actually shipped, collected in one place. The point is to keep prompts and outcomes together.">
+      What I asked for, how the work was broken down, and what actually shipped, collected in one place. The point is to keep prompts and outcomes together.
+    </p>
+  </section>
+
+  <!-- ================= Stats ================= -->
+  <section class="section wrap" style="padding-block-start:0">
+    <dl class="stats">
+      <div data-reveal style="--d:0">
+        <dt data-ko="완료" data-en="Shipped">Shipped</dt>
+        <dd><span data-count="4">0</span> <small data-ko="프로젝트" data-en="projects">projects</small></dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ================= Work log ================= -->
+  <section class="section wrap" id="log" style="padding-block-start:0">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title" data-ko="작업 기록" data-en="Work Log">Work Log</h2>
+      <span class="section-index">
+        <span data-filter-count>06</span>
+        <span data-ko="/ 건" data-en="/ Entries">/ Entries</span>
+      </span>
+    </div>
+
+    <div class="filters" data-reveal role="group"
+         data-ko-aria="작업 유형 필터" data-en-aria="Filter by type" aria-label="Filter by type">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true"
+              data-ko="전체" data-en="All">All</button>
+      <button class="chip" type="button" data-filter="game" aria-pressed="false"
+              data-ko="게임" data-en="Games">Games</button>
+      <button class="chip" type="button" data-filter="web" aria-pressed="false"
+              data-ko="웹" data-en="Web">Web</button>
+    </div>
+
+    <!--
+      Entry template / 항목 추가 템플릿
+      <article class="entry" data-tags="game" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2026</div>
+          <div class="entry__org" data-ko="맥락" data-en="Context">Context</div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title" data-ko="제목" data-en="Title">Title</h3>
+            <span class="entry__prize" data-ko="완료" data-en="Shipped">Shipped</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="무엇을 어떻게 했는지." data-en="What was done, and how.">What was done, and how.</li>
+          </ul>
+          <ul class="entry__tags"><li>Tag</li></ul>
+        </div>
+      </article>
+    -->
+
+    <div class="entries">
+      <article class="entry" data-tags="game" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year" data-ko="2026 - 현재" data-en="2026 - Present">2026 - Present</div>
+          <div class="entry__org" data-ko="JAEMINNEX 결선" data-en="JAEMINNEX finals">JAEMINNEX finals</div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title" data-ko="오빠 뭐해?" data-en="Whatcha Doin&rsquo;, Babe?">Whatcha Doin&rsquo;, Babe?</h3>
+            <span class="entry__prize" data-ko="개발 중" data-en="In Progress">In Progress</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="네 개의 페르소나가 스테이지를 넘어 대화 기억을 이어가고 각자 독립적으로 반응하는 프롬프트 아키텍처를 Claude와 함께 설계했습니다."
+                data-en="Designed a prompt architecture with Claude in which four personas carry conversation memory across stages and react independently.">
+              Designed a prompt architecture with Claude in which four personas carry conversation memory across stages and react independently.
+            </li>
+            <li data-ko="대화 시스템과 대화 도중 주제를 전환하는 로직을 구현했습니다."
+                data-en="Implemented the dialogue system and its in-conversation topic switching.">
+              Implemented the dialogue system and its in-conversation topic switching.
+            </li>
+          </ul>
+          <ul class="entry__tags">
+            <li>LLM</li><li data-ko="프롬프트 설계" data-en="Prompt Architecture">Prompt Architecture</li><li>Claude Code</li>
+          </ul>
+          <div class="entry__shots">
+            <figure>
+              <img src="../assets/img/shots/whatcha-doin.webp"
+                   alt="Whatcha Doin, Babe? title screen" loading="lazy">
+            </figure>
+            <figure>
+              <img src="../assets/img/shots/whatcha-doin-ingame.webp"
+                   alt="Whatcha Doin, Babe? in play: a phone chat window open on the desk during the tutorial" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-tags="game" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2026</div>
+          <div class="entry__org" data-ko="JAEMINNEX 예선" data-en="JAEMINNEX qualifier">JAEMINNEX qualifier</div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">Low Cortisol</h3>
+            <span class="entry__prize" data-ko="완료" data-en="Shipped">Shipped</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="Claude Code로 기획부터 구현까지 3일 만에 끝냈습니다."
+                data-en="Took it from concept to a playable build in three days with Claude Code.">
+              Took it from concept to a playable build in three days with Claude Code.
+            </li>
+          </ul>
+          <ul class="entry__tags">
+            <li data-ko="게임잼" data-en="Game Jam">Game Jam</li><li>Claude Code</li>
+          </ul>
+          <div class="entry__shots">
+            <figure>
+              <img src="../assets/img/shots/low-cortisol-ingame.webp"
+                   alt="Low Cortisol in play: the pixel office floor on Day 2, with the scolding counter and chatter from every desk" loading="lazy">
+            </figure>
+            <figure>
+              <img src="../assets/img/shots/low-cortisol.webp"
+                   alt="Low Cortisol press kit" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-tags="game, web" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year" data-ko="2025 - 현재" data-en="2025 - Present">2025 - Present</div>
+          <div class="entry__org">
+            <a class="u-link" href="https://numerobeta.netlify.app" target="_blank" rel="noopener">numerobeta.netlify.app</a>
+          </div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">Numero</h3>
+            <span class="entry__prize" data-ko="운영 중" data-en="Live">Live</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="Claude Code로 게임을 만든 뒤, Claude가 최적 전략을 탐색하고 직접 플레이하는 시뮬레이션으로 밸런스를 조정했습니다."
+                data-en="Built the game with Claude Code, then tuned its balance through simulations in which Claude searched for and played the optimal strategy.">
+              Built the game with Claude Code, then tuned its balance through simulations in which Claude searched for and played the optimal strategy.
+            </li>
+            <li data-ko="그 시뮬레이션을 재현 가능하게 만들기 위해 완전히 결정론적인 게임 구조를 설계했습니다."
+                data-en="Designed a fully deterministic game architecture to make those simulations reproducible.">
+              Designed a fully deterministic game architecture to make those simulations reproducible.
+            </li>
+            <li data-ko="현재까지 누적 플레이 세션 10,000회 이상."
+                data-en="10,000+ completed play sessions to date.">
+              10,000+ completed play sessions to date.
+            </li>
+          </ul>
+          <ul class="entry__tags">
+            <li>Web</li><li data-ko="시뮬레이션" data-en="Simulation">Simulation</li><li>Claude Code</li>
+          </ul>
+          <div class="entry__shots">
+            <figure>
+              <img src="../assets/img/shots/numero.gif"
+                   alt="Numero being played, recorded as a looping clip" loading="lazy">
+            </figure>
+            <figure class="is-contain">
+              <img src="../assets/img/shots/numero.webp"
+                   alt="Numero in play" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-tags="game" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year" data-ko="2026 - 현재" data-en="2026 - Present">2026 - Present</div>
+          <div class="entry__org" data-ko="비생성형 인간들 · 아주대학교" data-en="Non-Generative Humans · Ajou University">
+            Non-Generative Humans · Ajou University
+          </div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">
+              <a class="u-link" href="https://gongga.ng" target="_blank" rel="noopener">gongga.ng</a>
+            </h3>
+            <span class="entry__prize" data-ko="공개" data-en="Released">Released</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="수업 사이에 가볍게 즐길 수 있는 캐주얼 게임을 6인 팀과 Claude로 만듭니다."
+                data-en="Build casual games with Claude and a 6-member team, for students to play between classes.">
+              Build casual games with Claude and a 6-member team, for students to play between classes.
+            </li>
+            <li data-ko="동아리가 직접 만든 웹게임 포털 gongga.ng를 통해 2026년 9월 첫 타이틀을 공개했습니다."
+                data-en="Released the first titles in September 2026 through gongga.ng, the web game portal the club built itself.">
+              Released the first titles in September 2026 through gongga.ng, the web game portal the club built itself.
+            </li>
+          </ul>
+          <ul class="entry__tags">
+            <li data-ko="팀 리드" data-en="Team Lead">Team Lead</li><li>Claude Code</li>
+          </ul>
+          <div class="entry__shots">
+            <figure>
+              <img src="../assets/img/shots/gongga.webp"
+                   alt="A casual game from gongga.ng being played, recorded as a looping clip" loading="lazy">
+            </figure>
+            <figure>
+              <img src="../assets/img/shots/gongga-block.webp"
+                   alt="A block-popping puzzle on gongga.ng, mid-combo" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-tags="web" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2026</div>
+          <div class="entry__org" data-ko="웹 도구" data-en="Web Tool">Web Tool</div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">MojiAni</h3>
+            <span class="entry__prize" data-ko="개발 중" data-en="In Progress">In Progress</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="이모지를 화면에 배치해 간단한 프레임 애니메이션을 만드는 웹사이트입니다."
+                data-en="A website for making simple frame-by-frame animations by arranging emoji on a canvas.">
+              A website for making simple frame-by-frame animations by arranging emoji on a canvas.
+            </li>
+          </ul>
+          <ul class="entry__tags">
+            <li>Web</li><li data-ko="애니메이션" data-en="Animation">Animation</li><li>Claude Code</li>
+          </ul>
+          <div class="entry__shots">
+            <figure>
+              <img src="../assets/img/shots/mojiani-editor.webp"
+                   alt="The MojiAni editor: an emoji picker, the canvas, image filters, and the frame timeline" loading="lazy">
+            </figure>
+            <figure>
+              <img src="../assets/img/shots/mojiani-output.webp"
+                   alt="An animation made in MojiAni: a UFO beaming up a cow" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" data-tags="web" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2026.09</div>
+          <div class="entry__org">GitHub Pages</div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title" data-ko="이 포트폴리오 사이트" data-en="This portfolio site">This portfolio site</h3>
+            <span class="entry__prize" data-ko="완료" data-en="Shipped">Shipped</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="레퍼런스 이미지 한 장에서 시작해 반응형 포트폴리오를 만들었습니다."
+                data-en="Started from a single reference image and built out a responsive portfolio.">
+              Started from a single reference image and built out a responsive portfolio.
+            </li>
+            <li data-ko="스크롤 리빌, 패럴랙스, 풀스크린 메뉴, 한국어/영어 전환까지 의존성 없이 바닐라 JS로 구현했습니다."
+                data-en="Scroll reveals, parallax, a fullscreen menu and a KO/EN language switch, all in dependency-free vanilla JS.">
+              Scroll reveals, parallax, a fullscreen menu and a KO/EN language switch, all in dependency-free vanilla JS.
+            </li>
+          </ul>
+          <ul class="entry__tags">
+            <li>HTML</li><li>CSS</li><li>Vanilla JS</li><li>i18n</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= How it went ================= -->
+  <section class="section wrap" id="process">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title" data-ko="진행 방식" data-en="How It Went">How It Went</h2>
+      <span class="section-index" data-ko="과정" data-en="Process">Process</span>
+    </div>
+
+    <div class="showcase">
+      <article class="panel" data-reveal style="--d:0">
+        <div class="panel__label">01 &mdash; <span data-ko="요청" data-en="Prompt">Prompt</span></div>
+        <h3 data-ko="레퍼런스 한 장에서 출발" data-en="Starting from one reference">Starting from one reference</h3>
+        <p data-ko="디자인 시안 이미지와 함께 다크 테마, 반응형, 애니메이션이라는 세 가지 조건만 전달했습니다."
+           data-en="A single design image plus three constraints: dark theme, responsive, animated.">
+          A single design image plus three constraints: dark theme, responsive, animated.
+        </p>
+        <pre><code>이 이미지를 기반으로 포트폴리오
+<b>반응형 애니메이션</b> 웹사이트를 구현하고,
+<b>다크 테마</b>(쥐색, 검은색)로 변경해줘.</code></pre>
+      </article>
+
+      <article class="panel" data-reveal style="--d:1">
+        <div class="panel__label">02 &mdash; <span data-ko="구현" data-en="Build">Build</span></div>
+        <h3 data-ko="구조부터 모션까지" data-en="From structure to motion">From structure to motion</h3>
+        <p data-ko="디자인 토큰을 CSS 변수로 정리한 뒤 레이아웃, 스크롤 리빌, 패럴랙스를 순서대로 얹었습니다."
+           data-en="Design tokens first as CSS variables, then layout, scroll reveals and parallax in order.">
+          Design tokens first as CSS variables, then layout, scroll reveals and parallax in order.
+        </p>
+        <pre><code>--bg: <b>#ffffff</b>
+--fg: <b>#0d0d0d</b>
+--line: rgba(13, 13, 13, .16)
+--ease: cubic-bezier(.22, 1, .36, 1)</code></pre>
+      </article>
+
+      <article class="panel" data-reveal style="--d:2">
+        <div class="panel__label">03 &mdash; <span data-ko="결과" data-en="Result">Result</span></div>
+        <h3 data-ko="의존성 0, 정적 배포" data-en="Zero dependencies, static deploy">Zero dependencies, static deploy</h3>
+        <p data-ko="프레임워크 없이 HTML + CSS + JS 세 파일로 완성해 GitHub Pages에 그대로 올렸습니다."
+           data-en="No framework: three files of HTML, CSS and JS, served straight from GitHub Pages.">
+          No framework: three files of HTML, CSS and JS, served straight from GitHub Pages.
+        </p>
+        <pre><code>index.html
+claude/index.html
+assets/css/main.css
+assets/js/main.js  <b>+ 0 deps</b></code></pre>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= Notes ================= -->
+  <section class="section wrap" id="notes" style="padding-block-start:0">
+    <div class="split">
+      <div class="split__aside" data-reveal>
+        <h2 class="section-title" data-ko="메모" data-en="Notes">Notes</h2>
+        <p data-ko="작업하며 남긴 메모입니다." data-en="Notes left along the way.">Notes left along the way.</p>
+      </div>
+
+      <div>
+        <ul class="big-list">
+          <li data-reveal style="--d:0" data-ko="요구사항을 먼저 쪼갤 것" data-en="Split the request first">
+            Split the request first
+          </li>
+          <li data-reveal style="--d:1" data-ko="토큰부터 정하면 흔들리지 않는다" data-en="Tokens first, then nothing drifts">
+            Tokens first, then nothing drifts
+          </li>
+          <li data-reveal style="--d:2" data-ko="모션은 마지막에 얹는다" data-en="Motion goes on last">
+            Motion goes on last
+          </li>
+          <li data-reveal style="--d:3" data-ko="reduced-motion은 기본값이다" data-en="Reduced motion is the baseline">
+            Reduced motion is the baseline
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer wrap">
+  <a class="footer__cta u-link" href="https://github.com/Malways" target="_blank" rel="noopener" data-reveal>
+    github.com/Malways
+  </a>
+
+  <div class="footer__bottom">
+    <span>&copy; <span data-year>2026</span> malways.
+      <span data-ko="모든 권리 보유." data-en="All rights reserved.">All rights reserved.</span>
+    </span>
+    <nav class="footer__social" data-ko-aria="사이트 링크" data-en-aria="Site links" aria-label="Site links">
+      <a href="../" data-ko="포트폴리오" data-en="Portfolio">Portfolio</a>
+      <a href="#top" data-ko="맨 위로" data-en="Back to top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

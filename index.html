@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>malways — Portfolio</title>
+<meta name="description" content="Portfolio of Haram Jung. Game design, service development, and building with Claude.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://malways.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="malways — Portfolio">
+<meta property="og:description" content="Please Go Further, Irregular Man. The portfolio page of Haram Jung.">
+<meta property="og:url" content="https://malways.github.io/">
+<meta property="og:image" content="https://malways.github.io/assets/img/mark.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-ko="본문으로 건너뛰기" data-en="Skip to content">Skip to content</a>
+
+<!-- Scroll progress -->
+<div class="progress" aria-hidden="true"></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="#top" data-ko-aria="malways 홈" data-en-aria="malways home" aria-label="malways home">
+      <span class="logo__word">Malways</span>
+    </a>
+
+    <div class="header__end">
+      <nav class="nav" data-ko-aria="주요 메뉴" data-en-aria="Main menu" aria-label="Main menu">
+        <a href="#about" data-ko="소개" data-en="About">About</a>
+        <a href="#awards" data-ko="수상" data-en="Awards">Awards</a>
+        <a href="#projects" data-ko="프로젝트" data-en="Projects">Projects</a>
+        <a href="claude/">Claude</a>
+      </nav>
+
+      <div class="lang" role="group" aria-label="Language / 언어">
+        <button class="lang__btn" type="button" data-lang="ko" aria-pressed="false">KO</button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button class="lang__btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+      </div>
+
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu"
+              data-ko-aria="메뉴" data-en-aria="Menu" aria-label="Menu">
+        <span class="burger__text">Menu</span>
+        <span class="burger__lines" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Fullscreen menu (mobile) -->
+<div class="menu" id="menu" aria-hidden="true">
+  <nav data-ko-aria="모바일 메뉴" data-en-aria="Mobile menu" aria-label="Mobile menu">
+    <ul>
+      <li><a href="#about" data-ko="소개" data-en="About">About</a></li>
+      <li><a href="#awards" data-ko="수상" data-en="Awards">Awards</a></li>
+      <li><a href="#projects" data-ko="프로젝트" data-en="Projects">Projects</a></li>
+      <li><a href="#leadership" data-ko="리더십" data-en="Leadership">Leadership</a></li>
+      <li><a href="claude/">Claude</a></li>
+    </ul>
+  </nav>
+  <div class="menu__foot">
+    <span data-ko="서울, 대한민국" data-en="Seoul, KR">Seoul, KR</span>
+  </div>
+</div>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero wrap">
+    <div class="hero__grid">
+      <div>
+        <h1 class="hero__title" data-split
+            data-ko="부디 더 멀리까지, 이레귤러 맨"
+            data-en="Please Go Further, Irregular Man">
+          Please Go Further, Irregular Man
+        </h1>
+      </div>
+
+      <figure class="hero__art hero__art--mark" data-hero-reveal data-reveal="pop">
+        <img src="assets/img/mark.svg"
+             alt="malways mark: a face of two eyes and a flat mouth inside a frame with black bars along the top and right"
+             width="320" height="320" fetchpriority="high">
+      </figure>
+    </div>
+
+    <p class="hero__scroll" data-reveal data-hero-reveal>
+      <span class="line" aria-hidden="true"></span>
+      <span data-ko="스크롤해서 둘러보기" data-en="Scroll to explore">Scroll to explore</span>
+    </p>
+  </section>
+
+  <!-- ================= About ================= -->
+  <section class="section wrap" id="about">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title" data-ko="소개" data-en="About">About</h2>
+      <span class="section-index" data-ko="01 / 프로필" data-en="01 / Profile">01 / Profile</span>
+    </div>
+
+    <div class="split">
+      <div class="split__aside" data-reveal>
+        <p data-ko="아주대학교 디지털미디어학과 26학번 정하람입니다. 게임 기획자를 목표로 하고 있고, 문제를 푸는 서비스를 만드는 일에도 관심이 많습니다."
+           data-en="I&rsquo;m Haram Jung, Digital Media at Ajou University, Class of 2026. I&rsquo;m working toward becoming a game designer, and also drawn to services that solve real problems.">
+          I&rsquo;m Haram Jung, Digital Media at Ajou University, Class of 2026. I&rsquo;m working toward becoming a game designer, and also drawn to services that solve real problems.
+        </p>
+        <p data-ko="지난 1년간 세 번의 해커톤에서 Claude와 함께 프로젝트를 만들고 교내에 서비스를 배포하면서, LLM이 만들기의 장벽을 어떻게 허무는지 직접 보았습니다."
+           data-en="Over the past year I built projects with Claude across three hackathons and shipped a service on campus, and saw firsthand how LLMs dismantle the barriers to building.">
+          Over the past year I built projects with Claude across three hackathons and shipped a service on campus, and saw firsthand how LLMs dismantle the barriers to building.
+        </p>
+        <p data-ko-html="인간이 창조해낸 모든 예술을 집대성한 창작물.<br>그것이 바로 게임이라고 생각합니다."
+           data-en-html="A single creation that gathers every art humankind has made.<br>That, I believe, is exactly what a game is.">
+          A single creation that gathers every art humankind has made.<br>
+          That, I believe, is exactly what a game is.
+        </p>
+        <p data-ko="언제까지나 진심과 열정을 담아 개발하고 싶습니다!"
+           data-en="I want to build with sincerity and passion, always!">
+          I want to build with sincerity and passion, always!
+        </p>
+      </div>
+
+      <div>
+        <ul class="big-list">
+          <li data-reveal style="--d:0" data-ko="게임 / 서비스 개발" data-en="Game &amp; Service Development">Game &amp; Service Development</li>
+          <li data-reveal style="--d:1" data-ko="해커톤 사랑꾼" data-en="Hackathon Devotee">Hackathon Devotee</li>
+          <li data-reveal style="--d:2" data-ko="내러티브의 힘" data-en="The Power of Narrative">The Power of Narrative</li>
+          <li data-reveal style="--d:3" data-ko="창작과 표현" data-en="Creation &amp; Expression">Creation &amp; Expression</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Awards ================= -->
+  <section class="section wrap" id="awards">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title" data-ko="수상" data-en="Awards">Awards</h2>
+      <span class="section-index" data-ko="02 / 기록" data-en="02 / Records">02 / Records</span>
+    </div>
+
+    <div class="entries">
+      <article class="entry" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2026</div>
+          <div class="entry__org" data-ko="JAEMINNEX &mdash; 넥슨 대학생 AI 게임잼" data-en="JAEMINNEX &mdash; Nexon Collegiate AI Game Jam">
+            JAEMINNEX &mdash; Nexon Collegiate AI Game Jam
+          </div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title" data-ko="Low Cortisol · 오빠 뭐해?" data-en="Low Cortisol · Whatcha Doin&rsquo;, Babe?">Low Cortisol · Whatcha Doin&rsquo;, Babe?</h3>
+            <span class="entry__prize" data-ko="선발 참가자" data-en="Selected Participant">Selected Participant</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="560명이 넘는 지원자 중 56명(14팀)에 선발되었고, 그중 유일한 1학년이었습니다."
+                data-en="Chosen as 1 of 56 participants (14 teams) from 560+ applicants; the only first-year student in the cohort.">
+              Chosen as 1 of 56 participants (14 teams) from 560+ applicants; the only first-year student in the cohort.
+            </li>
+            <li data-ko="게임 디자인과 프롬프트 엔지니어링을 맡았고, 대화 시스템과 대화 도중 주제를 전환하는 기능을 구현했습니다."
+                data-en="Led game design and prompt engineering, and implemented the dialogue system and in-conversation topic switching.">
+              Led game design and prompt engineering, and implemented the dialogue system and in-conversation topic switching.
+            </li>
+            <li data-ko="예선에서 Claude Code로 3일 만에 Low Cortisol을 만들었고, 결선에서 오빠 뭐해?를 개발했습니다."
+                data-en="Built Low Cortisol in 3 days with Claude Code in the qualifying round, then developed Whatcha Doin&rsquo;, Babe? during the finals.">
+              Built Low Cortisol in 3 days with Claude Code in the qualifying round, then developed Whatcha Doin&rsquo;, Babe? during the finals.
+            </li>
+            <li data-ko="넥슨 스태프가 내부 플레이테스트에서 오빠 뭐해?를 유난히 독창적인 콘셉트로 꼽았습니다."
+                data-en="Nexon staff singled out Whatcha Doin&rsquo;, Babe? as an unusually original concept during internal playtesting.">
+              Nexon staff singled out Whatcha Doin&rsquo;, Babe? as an unusually original concept during internal playtesting.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2023</div>
+          <div class="entry__org" data-ko="제8회 전국 고등학교 동아리 SW 경진대회" data-en="8th National High School Club Software Competition">
+            8th National High School Club Software Competition
+          </div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">EmergenShare</h3>
+            <span class="entry__prize entry__prize--silver" data-ko="준우승" data-en="2nd Place">2nd Place</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="응급실 혼잡도를 실시간으로 파악해 병원과 구급대를 잇는 응급 이송 플랫폼."
+                data-en="An emergency transfer platform that reads ER congestion live and links hospitals to ambulance crews.">
+              An emergency transfer platform that reads ER congestion live and links hospitals to ambulance crews.
+            </li>
+            <li data-ko="결선에서 25개 학교 동아리 중 2위를 했습니다."
+                data-en="Placed 2nd among 25 school clubs in the final round.">
+              Placed 2nd among 25 school clubs in the final round.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2023</div>
+          <div class="entry__org" data-ko="Photon 게임잼" data-en="Photon Game Jam">Photon Game Jam</div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">AeroDuelo</h3>
+            <span class="entry__prize" data-ko="특별상" data-en="Special Prize">Special Prize</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="에이스 컴뱃 스타일의 멀티플레이어 공중전 슈터."
+                data-en="An Ace Combat style multiplayer dogfighting shooter.">
+              An Ace Combat style multiplayer dogfighting shooter.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2025</div>
+          <div class="entry__org" data-ko="한양대학교 ERICA 제13회 SW창업아이디어톤" data-en="13th Hanyang University ERICA SW Startup Ideathon">
+            13th Hanyang University ERICA SW Startup Ideathon
+          </div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">Livia</h3>
+            <span class="entry__prize entry__prize--bronze" data-ko="장려상" data-en="3rd Prize">3rd Prize</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="실시간 이미지 디텍션으로 유해 콘텐츠를 가려주는 프로그램."
+                data-en="A program that hides harmful content using real-time image detection.">
+              A program that hides harmful content using real-time image detection.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2020</div>
+          <div class="entry__org" data-ko="삼성 주니어 소프트웨어 창작대회" data-en="Samsung Junior Software Creative Competition">
+            Samsung Junior Software Creative Competition
+          </div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">DreamTrees</h3>
+            <span class="entry__prize" data-ko="파이널리스트" data-en="Finalist">Finalist</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="중학교 2학년 때 전국 1,747개 팀 중 최종 20팀에 올랐습니다."
+                data-en="Reached the final 20 of 1,747 teams nationwide as an 8th grader.">
+              Reached the final 20 of 1,747 teams nationwide as an 8th grader.
+            </li>
+            <li data-ko="결식 아동을 위한 무료 급식소 위치와 봉사 기회를 보여주는 지도 서비스를 만들었습니다."
+                data-en="Built a map service showing free meal locations and volunteering opportunities for children facing food insecurity.">
+              Built a map service showing free meal locations and volunteering opportunities for children facing food insecurity.
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= Projects ================= -->
+  <section class="section wrap" id="projects">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title" data-ko="프로젝트" data-en="Projects">Projects</h2>
+      <span class="section-index" data-ko="03 / 선별" data-en="03 / Selected">03 / Selected</span>
+    </div>
+
+    <!-- ---------- Services ---------- -->
+    <div class="group">
+      <p class="group__label" data-reveal data-ko="서비스" data-en="Services">Services</p>
+      <div class="entries">
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year">2023</div>
+            <div class="entry__org" data-ko="단국대학교 소프트웨어고등학교" data-en="Dankook University Software High School">
+              Dankook University Software High School
+            </div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title">EmergenShare</h3>
+              <span class="entry__role" data-ko="응급 이송 플랫폼" data-en="Emergency Transfer Platform">Emergency Transfer Platform</span>
+            </div>
+            <ul class="entry__list">
+              <li data-ko="구급차가 제때 가용 병원을 찾지 못해 발생하는 예방 가능한 사망을 줄이기 위한 응급 이송 플랫폼."
+                  data-en="An emergency transfer platform addressing preventable deaths when ambulances cannot reach an available hospital in time.">
+                An emergency transfer platform addressing preventable deaths when ambulances cannot reach an available hospital in time.
+              </li>
+              <li data-ko="응급실 혼잡도를 실시간으로 파악하는 객체 인식 시스템을 설계해 병원과 구급대를 연결했습니다."
+                  data-en="Designed an object-detection system for emergency room crowding, monitoring it in real time and linking hospitals to ambulance crews.">
+                Designed an object-detection system for emergency room crowding, monitoring it in real time and linking hospitals to ambulance crews.
+              </li>
+            </ul>
+            <ul class="entry__tags">
+              <li>Flutter</li><li>Firebase</li><li>YOLO</li>
+            </ul>
+            <figure class="entry__shot entry__shot--full">
+              <img src="assets/img/shots/emergenshare.webp"
+                   alt="EmergenShare prototype: YOLO detecting beds and patients in a scale model of an emergency room, the detector running on a display, and the Raspberry Pi and webcam rig"
+                   width="1911" height="894" loading="lazy">
+            </figure>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- ---------- Games ---------- -->
+    <div class="group">
+      <p class="group__label" data-reveal data-ko="게임" data-en="Games">Games</p>
+      <div class="entries">
+
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year" data-ko="2026 - 현재" data-en="2026 - Present">2026 - Present</div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title" data-ko="오빠 뭐해?" data-en="Whatcha Doin&rsquo;, Babe?">Whatcha Doin&rsquo;, Babe?</h3>
+              <span class="entry__role" data-ko="LLM 기반 비주얼 노벨" data-en="LLM-Driven Visual Novel">LLM-Driven Visual Novel</span>
+            </div>
+            <ul class="entry__list">
+              <li data-ko="네 개의 페르소나가 스테이지를 넘어 대화 기억을 이어가고 각자 독립적으로 반응하는 프롬프트 아키텍처를 설계했습니다."
+                  data-en="Designed a prompt architecture in which four personas carry conversation memory across stages and react independently.">
+                Designed a prompt architecture in which four personas carry conversation memory across stages and react independently.
+              </li>
+              <li data-ko="핵심 기획과 코드를 Claude와 함께 개발했고, 2026년 12월 공개를 목표로 하고 있습니다."
+                  data-en="Developed the core design and code with Claude&rsquo;s assistance; release planned for December 2026.">
+                Developed the core design and code with Claude&rsquo;s assistance; release planned for December 2026.
+              </li>
+            </ul>
+            <ul class="entry__tags">
+              <li>LLM</li><li>Visual Novel</li><li>Claude Code</li>
+            </ul>
+            <!-- Replace with a real screenshot: keep the file name, or point src at your own image. -->
+            <figure class="entry__shot entry__shot--full">
+              <img src="assets/img/shots/whatcha-doin.webp"
+                   alt="Whatcha Doin, Babe? title screen: four characters standing in a cafe, each holding a phone"
+                   width="2560" height="1440" loading="lazy">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year">2026</div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title">Low Cortisol</h3>
+              <span class="entry__role" data-ko="내러티브 게임" data-en="Narrative Game">Narrative Game</span>
+            </div>
+            <ul class="entry__list">
+              <li data-ko="Claude Code로 3일 만에 처음부터 끝까지 만들었습니다."
+                  data-en="Built end to end in three days with Claude Code.">
+                Built end to end in three days with Claude Code.
+              </li>
+            </ul>
+            <ul class="entry__tags">
+              <li data-ko="내러티브" data-en="Narrative">Narrative</li><li>Claude Code</li>
+            </ul>
+            <figure class="entry__shot entry__shot--full">
+              <img src="assets/img/shots/low-cortisol.webp"
+                   alt="Low Cortisol press kit: dialogue scenes, the pixel-art office floor, and four panels describing the five-day office escape loop"
+                   width="1933" height="1020" loading="lazy">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year" data-ko="2025 - 현재" data-en="2025 - Present">2025 - Present</div>
+            <div class="entry__org">
+              <a class="u-link" href="https://numerobeta.netlify.app" target="_blank" rel="noopener">numerobeta.netlify.app</a>
+            </div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title">Numero</h3>
+              <span class="entry__role" data-ko="웹 게임" data-en="Web Game">Web Game</span>
+            </div>
+            <ul class="entry__list">
+              <li data-ko="현재까지 누적 플레이 세션 10,000회 이상."
+                  data-en="10,000+ completed play sessions to date.">
+                10,000+ completed play sessions to date.
+              </li>
+              <li data-ko="Claude Code로 게임을 만든 뒤, Claude가 최적 전략을 탐색하고 직접 플레이하는 시뮬레이션으로 밸런스를 조정했습니다."
+                  data-en="Built the game with Claude Code, then tuned its balance through simulations in which Claude searched for and played the optimal strategy.">
+                Built the game with Claude Code, then tuned its balance through simulations in which Claude searched for and played the optimal strategy.
+              </li>
+              <li data-ko="그 시뮬레이션을 재현 가능하게 만들기 위해 완전히 결정론적인 게임 구조를 설계했습니다."
+                  data-en="Designed a fully deterministic game architecture to make those simulations reproducible.">
+                Designed a fully deterministic game architecture to make those simulations reproducible.
+              </li>
+              <li data-ko="교내 동아리가 만든 웹게임 포털 gongga.ng에 통합하는 작업을 진행 중입니다."
+                  data-en="Currently integrating it into gongga.ng, the web game portal built by my university club.">
+                Currently integrating it into gongga.ng, the web game portal built by my university club.
+              </li>
+            </ul>
+            <ul class="entry__tags">
+              <li>Web</li><li>Claude Code</li>
+            </ul>
+            <figure class="entry__shot entry__shot--portrait">
+              <img src="assets/img/shots/numero.webp"
+                   alt="Numero in play: the running score, the turn counter, rarity odds, and three math expressions to choose from"
+                   width="663" height="1155" loading="lazy">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year">2023</div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title">AeroDuelo</h3>
+              <span class="entry__role" data-ko="멀티플레이어 슈터" data-en="Multiplayer Shooter">Multiplayer Shooter</span>
+            </div>
+            <ul class="entry__list">
+              <li data-ko="에이스 컴뱃 스타일의 멀티플레이어 공중전 슈터."
+                  data-en="An Ace Combat style multiplayer dogfighting shooter.">
+                An Ace Combat style multiplayer dogfighting shooter.
+              </li>
+            </ul>
+            <ul class="entry__tags">
+              <li data-ko="멀티플레이어" data-en="Multiplayer">Multiplayer</li>
+              <li data-ko="슈터" data-en="Shooter">Shooter</li>
+            </ul>
+            <figure class="entry__shot entry__shot--full">
+              <img src="assets/img/shots/aeroduelo.webp"
+                   alt="AeroDuelo in-game capture: a jet on a strike mission with HUD readouts for speed, thrust, altitude and radar"
+                   width="924" height="463" loading="lazy">
+            </figure>
+          </div>
+        </article>
+
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year">2023</div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title">Project Rhythmical</h3>
+              <span class="entry__role" data-ko="리듬 팬게임" data-en="Rhythm Fan Game">Rhythm Fan Game</span>
+            </div>
+            <ul class="entry__list">
+              <li data-ko="블루 아카이브와 크립트 오브 더 네크로댄서를 섞은 리듬 팬게임."
+                  data-en="A rhythm fan game crossing Blue Archive with Crypt of the NecroDancer.">
+                A rhythm fan game crossing Blue Archive with Crypt of the NecroDancer.
+              </li>
+            </ul>
+            <ul class="entry__tags">
+              <li data-ko="리듬" data-en="Rhythm">Rhythm</li>
+              <li data-ko="팬게임" data-en="Fan Game">Fan Game</li>
+            </ul>
+            <figure class="entry__shot entry__shot--full">
+              <img src="assets/img/shots/rhythmical.webp"
+                   alt="Project Rhythmical in play: a pixel-art pilot dodging a boss beam on the note grid, with the timing bar below"
+                   width="1902" height="1067" loading="lazy">
+            </figure>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Leadership ================= -->
+  <section class="section wrap" id="leadership">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title" data-ko="리더십" data-en="Leadership">Leadership</h2>
+      <span class="section-index" data-ko="04 / 활동" data-en="04 / Community">04 / Community</span>
+    </div>
+
+    <div class="entries">
+      <article class="entry" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year" data-ko="2026 - 현재" data-en="2026 - Present">2026 - Present</div>
+          <div class="entry__org" data-ko="아주대학교" data-en="Ajou University">Ajou University</div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title" data-ko="비생성형 인간들" data-en="Non-Generative Humans">Non-Generative Humans</h3>
+            <span class="entry__role" data-ko="창립자 · 회장" data-en="Founder &amp; Club President">Founder &amp; Club President</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="동아리를 창립하고 6인 개발팀을 이끌고 있습니다."
+                data-en="Founded the club and lead a 6-member software development team.">
+              Founded the club and lead a 6-member software development team.
+            </li>
+            <li data-ko="수업 사이에 가볍게 즐길 수 있는 캐주얼 게임을 Claude와 함께 만듭니다."
+                data-en="Build casual games with Claude for students to play between classes.">
+              Build casual games with Claude for students to play between classes.
+            </li>
+            <li data-ko="2026년 9월 gongga.ng를 통해 첫 타이틀을 공개했습니다."
+                data-en="Released the first titles through gongga.ng in September 2026.">
+              Released the first titles through gongga.ng in September 2026.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year">2022 - 2023</div>
+          <div class="entry__org" data-ko="단국대학교 소프트웨어고등학교" data-en="Dankook University Software High School">
+            Dankook University Software High School
+          </div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title">Team Garlic · Target</h3>
+            <span class="entry__role" data-ko="동아리 회장" data-en="Club President">Club President</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="두 동아리를 이끌며 매년 동아리당 약 20명을 멘토링했습니다."
+                data-en="Led two clubs, mentoring roughly 20 students per club each year.">
+              Led two clubs, mentoring roughly 20 students per club each year.
+            </li>
+            <li data-ko="App Inventor, Flutter, AI 활용 개발 학습 트랙을 운영했습니다."
+                data-en="Led learning tracks in App Inventor, Flutter and AI-assisted development.">
+              Led learning tracks in App Inventor, Flutter and AI-assisted development.
+            </li>
+            <li data-ko="EmergenShare를 비롯한 앱과 서비스를 개발해 전국 대회에 출품했습니다."
+                data-en="Developed apps and services, including EmergenShare, and submitted projects to national competitions.">
+              Developed apps and services, including EmergenShare, and submitted projects to national competitions.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry__when">
+          <div class="entry__year" data-ko="2019 - 현재" data-en="2019 - Present">2019 - Present</div>
+          <div class="entry__org" data-ko="Happy Programmers (디스코드)" data-en="Happy Programmers (Discord)">
+            Happy Programmers (Discord)
+          </div>
+        </div>
+        <div>
+          <div class="entry__head">
+            <h3 class="entry__title" data-ko="개발자 커뮤니티" data-en="Developer Community">Developer Community</h3>
+            <span class="entry__role" data-ko="공동 운영자 · 60명" data-en="Co-Organizer, 60 members">Co-Organizer, 60 members</span>
+          </div>
+          <ul class="entry__list">
+            <li data-ko="7년 넘게 이어온 60인 규모의 개발자 디스코드 커뮤니티를 공동 운영하고 있습니다."
+                data-en="Co-organize a 60-member Discord developer community that has been running for over seven years.">
+              Co-organize a 60-member Discord developer community that has been running for over seven years.
+            </li>
+            <li data-ko="연말 게임잼 Happy Game Making Contest(HGMC)를 4회째 주최하고 있습니다."
+                data-en="Organize Happy Game Making Contest (HGMC), a year-end game jam, now in its 4th edition.">
+              Organize Happy Game Making Contest (HGMC), a year-end game jam, now in its 4th edition.
+            </li>
+            <li data-ko="네 번의 대회에서 Augmented Chess, Clear This Anyway를 포함해 15개 이상의 게임이 출품되고 리뷰되었습니다."
+                data-en="15+ games submitted and reviewed across the four editions, including Augmented Chess and Clear This Anyway.">
+              15+ games submitted and reviewed across the four editions, including Augmented Chess and Clear This Anyway.
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= Education & Skills ================= -->
+  <section class="section wrap" id="education">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title" data-ko="학력과 기술" data-en="Education &amp; Skills">Education &amp; Skills</h2>
+      <span class="section-index" data-ko="05 / 배경" data-en="05 / Background">05 / Background</span>
+    </div>
+
+    <!-- ---------- Education ---------- -->
+    <div class="group">
+      <p class="group__label" data-reveal data-ko="학력" data-en="Education">Education</p>
+      <div class="entries">
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year" data-ko="2026 - 현재" data-en="2026 - Present">2026 - Present</div>
+            <div class="entry__org" data-ko="학사 과정" data-en="Undergraduate">Undergraduate</div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title" data-ko="아주대학교" data-en="Ajou University">Ajou University</h3>
+              <span class="entry__role" data-ko="디지털미디어학과" data-en="Department of Digital Media">Department of Digital Media</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year">2022 - 2024</div>
+            <div class="entry__org" data-ko="고등학교" data-en="High School">High School</div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title" data-ko="단국대학교 소프트웨어고등학교" data-en="Dankook University Software High School">
+                Dankook University Software High School
+              </h3>
+            </div>
+          </div>
+        </article>
+
+        <article class="entry" data-reveal>
+          <div class="entry__when">
+            <div class="entry__year">2017</div>
+            <div class="entry__org" data-ko="영재 교육 과정" data-en="Gifted Program">Gifted Program</div>
+          </div>
+          <div>
+            <div class="entry__head">
+              <h3 class="entry__title" data-ko="한양대학교 소프트웨어 영재교육원" data-en="Hanyang University Software Gifted Education Program">
+                Hanyang University Software Gifted Education Program
+              </h3>
+              <span class="entry__role" data-ko="1기" data-en="Cohort 1">Cohort 1</span>
+            </div>
+            <ul class="entry__list">
+              <li data-ko="국내 최초의 대학 부설 소프트웨어 영재 교육 과정에서 모든 것이 시작되었습니다."
+                  data-en="South Korea&rsquo;s first university-affiliated software program for gifted students &mdash; where it all started.">
+                South Korea&rsquo;s first university-affiliated software program for gifted students &mdash; where it all started.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- ---------- Skills ---------- -->
+    <div class="group">
+      <p class="group__label" data-reveal data-ko="기술" data-en="Skills">Skills</p>
+      <div class="skills">
+        <div class="skills__row" data-reveal>
+          <div class="skills__label" data-ko="도구" data-en="Tools">Tools</div>
+          <ul class="tag-list">
+            <li>Claude Code</li><li>Codex</li><li>Supabase</li><li>Firebase</li><li>Git</li>
+          </ul>
+        </div>
+        <div class="skills__row" data-reveal>
+          <div class="skills__label" data-ko="프레임워크" data-en="Frameworks">Frameworks</div>
+          <ul class="tag-list">
+            <li>Unity</li><li>Flutter</li><li>Vite</li>
+          </ul>
+        </div>
+        <div class="skills__row" data-reveal>
+          <div class="skills__label" data-ko="언어" data-en="Languages">Languages</div>
+          <ul class="tag-list">
+            <li>C/C++</li><li>C#</li><li>Dart</li><li>JavaScript</li><li>Python</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer wrap">
+  <a class="footer__cta u-link" href="https://github.com/Malways" target="_blank" rel="noopener" data-reveal>
+    github.com/Malways
+  </a>
+
+  <div class="footer__bottom">
+    <span>&copy; <span data-year>2026</span> Haram Jung.
+      <span data-ko="모든 권리 보유." data-en="All rights reserved.">All rights reserved.</span>
+    </span>
+    <nav class="footer__social" data-ko-aria="사이트 링크" data-en-aria="Site links" aria-label="Site links">
+      <a href="claude/" data-ko="Claude로 만든 기록" data-en="Built with Claude">Built with Claude</a>
+      <a href="#top" data-ko="맨 위로" data-en="Back to top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

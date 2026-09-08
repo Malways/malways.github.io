@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320"
+     role="img" aria-label="malways mark">
+  <rect width="320" height="320" fill="#ffffff"/>
+
+  <!-- corner frame: full-width top bar meeting a full-height right bar -->
+  <rect x="0" y="0" width="320" height="48" fill="#0d0d0d"/>
+  <rect x="272" y="0" width="48" height="320" fill="#0d0d0d"/>
+
+  <!-- eyes -->
+  <circle cx="71" cy="153" r="13" fill="#0d0d0d"/>
+  <circle cx="205" cy="153" r="13" fill="#0d0d0d"/>
+
+  <!-- flat mouth with upturned ends -->
+  <path d="M100 141 V164 H176 V141"
+        fill="none" stroke="#0d0d0d" stroke-width="11" stroke-linecap="round"/>
+</svg>
